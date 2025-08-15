@@ -7,6 +7,7 @@ This project shows how to use **Multiple Linear Regression** to predict startup 
 -  Split data into **training** & **validation** sets
 -  Train a **Linear Regression** model with scikit-learn
 -  Compare predicted vs. actual profits
+-  Evaluate the model performance
 
 ## 🛠 Requirements
 - Python 3.x 
