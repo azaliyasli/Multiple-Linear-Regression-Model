@@ -4,6 +4,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
 
 df = pd.read_csv("50_Startups.csv")
 X = df.iloc[:, :-1].values
@@ -21,3 +22,7 @@ regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_val)
 np.set_printoptions(precision=2)
 print(np.concatenate((y_pred.reshape(len(y_pred), 1), y_val.reshape(len(y_val), 1)), 1))
+
+#Evaluating the Model Performance
+print(r2_score(y_val, y_pred))
+
